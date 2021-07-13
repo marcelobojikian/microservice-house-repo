@@ -2,6 +2,8 @@ spring:
 
   flyway:
     enabled: true
+    baselineOnMigrate: true
+    validateOnMigrate: false
 
   h2:
     console:
