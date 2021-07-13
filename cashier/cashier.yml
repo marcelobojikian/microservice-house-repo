@@ -1,13 +1,7 @@
 spring:
 
-  thymeleaf:
-    cache: false
-    enabled: true
-    prefix: classpath:/templates/
-    suffix: .html
-
   flyway:
-    enabled: false
+    enabled: true
 
   h2:
     console:
@@ -23,16 +17,7 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
-    initialization-mode: always
-    data: classpath:schema.sql,classpath:data.sql
+    initialization-mode: none
     
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: none
-      show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-    open-in-view: false
-
