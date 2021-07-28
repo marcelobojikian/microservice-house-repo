@@ -1,0 +1,18 @@
+
+spring:
+
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+    validateOnMigrate: false
+
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:transaction
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    initialization-mode: never
+    
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
