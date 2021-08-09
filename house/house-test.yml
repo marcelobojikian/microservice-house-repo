@@ -1,0 +1,26 @@
+ 
+spring:
+
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+    validateOnMigrate: false
+
+  h2:
+    console:
+      enable: true
+      path: /h2
+      settings:
+        trace: false
+        web-allow-others: false
+    
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:house-test
+    username: sa
+    password: 
+    initialization-mode: always
+    data: classpath:import.sql
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
